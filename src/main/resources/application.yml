@@ -1,3 +1,13 @@
+server:
+  port: ${PORT:8080}
+
+api:
+  database:
+    name: desafio_agrotis
+    host: 127.0.0.1
+    port: 5432
+    username: desafio
+    password: desafio
 
 spring:
   application:
@@ -5,9 +15,9 @@ spring:
 
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/desafio_agrotis}
-    username: ${DATASOURCE_USER:desafio}
-    password: ${DATASOURCE_PASS:desafio}
+    url: jdbc:postgresql://${api.database.host}:${api.database.port}/${api.database.name}}
+    password: ${api.database.password}
+    username: ${api.database.username}
 
   jpa:
     show-sql: true
