@@ -15,7 +15,7 @@ spring:
 
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://${api.database.host}:${api.database.port}/${api.database.name}}
+    url: jdbc:postgresql://${api.database.host}:${api.database.port}/${api.database.name}
     password: ${api.database.password}
     username: ${api.database.username}
 
