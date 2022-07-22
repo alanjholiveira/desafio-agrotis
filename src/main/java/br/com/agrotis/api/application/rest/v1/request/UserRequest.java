@@ -27,4 +27,10 @@ public record UserRequest(
                 .build();
     }
 
+    public static UserRequest from(final User entity) {
+        return new UserRequest(entity.getName(), entity.getStartDate(), entity.getEndDate(),
+                PropertyResponse.from(entity.getProperty()), entity.getTaxNumber(),
+                LaboratoryResponse.from(entity.getLaboratory()), entity.getObservations());
+    }
+
 }

@@ -14,6 +14,7 @@ O desafio possui uma api documentada usando swagger v3, ap√≥s o start da aplica√
 * PostgreSQL 12
 * JUnit 5
 * Mockito
+* Rest Assured
 * Docker
 * Docker Compose
 

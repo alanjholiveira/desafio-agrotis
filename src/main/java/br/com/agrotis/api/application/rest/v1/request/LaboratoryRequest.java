@@ -10,4 +10,8 @@ public record LaboratoryRequest(String nome) {
                 .build();
     }
 
+    public static LaboratoryRequest from(final Laboratory entity) {
+        return new LaboratoryRequest(entity.getName());
+    }
+
 }

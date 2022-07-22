@@ -10,4 +10,8 @@ public record PropertyRequest(String nome) {
                 .build();
     }
 
+    public static PropertyRequest from(final Property entity) {
+        return new PropertyRequest(entity.getName());
+    }
+
 }
