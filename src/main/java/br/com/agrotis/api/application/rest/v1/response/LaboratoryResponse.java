@@ -8,4 +8,11 @@ public record LaboratoryResponse(long id, String nome) {
         return new LaboratoryResponse(entity.getId(), entity.getName());
     }
 
+    public static Laboratory from(final LaboratoryResponse response) {
+        return Laboratory.builder()
+                .id(response.id())
+                .name(response.nome())
+                .build();
+    }
+
 }

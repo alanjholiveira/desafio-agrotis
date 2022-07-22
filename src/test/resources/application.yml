@@ -5,9 +5,9 @@ spring:
 
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/desafio_agrotis}
-    username: ${DATASOURCE_USER:desafio}
-    password: ${DATASOURCE_PASS:desafio}
+    url: jdbc:h2:mem:testDesafioAgrotis;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: root
 
   jpa:
     show-sql: true
@@ -15,7 +15,7 @@ spring:
       hibernate:
         format_sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     generate-ddl: false
 
 
