@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: desafio-api-agrotis
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/desafio_agrotis}
+    username: ${DATASOURCE_USER:desafio}
+    password: ${DATASOURCE_PASS:desafio}
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create
+    generate-ddl: false
+
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG
